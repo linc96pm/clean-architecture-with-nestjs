@@ -27,7 +27,7 @@ export class UsecasesProxyModule {
       providers: [
         {
           inject: [DatabaseTodoRepository],
-          provide: UsecasesProxyModule.GET_TODOS_USECASES_PROXY,
+          provide: UsecasesProxyModule.GET_TODO_USECASES_PROXY,
           useFactory: (todoRepository: DatabaseTodoRepository) =>
             new UseCaseProxy(new GetTodoUseCases(todoRepository)),
         },
